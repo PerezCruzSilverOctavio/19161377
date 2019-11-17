@@ -1,0 +1,31 @@
+Hacer una agenda donde permita al usuario introducir el nombre de la persona, calle, 
+numero de calle, colonoia, localidad, pais, datos extras, tel. domocilio, 
+tel. de casa, correo electronico, lugar de nacimiento y lugar de trabajo, al final mostrar todo lo que se pidio anteriormente.
+
+
+//Solución código
+
+package agenda;
+import javax.swing.JOptionPane;
+
+public class Agenda {
+
+    
+    public static void main(String[] args) {
+        
+        String mensaje="";
+        String[]campos={"Nombre","Calle", "Num Calle","Colonia",
+        "Localidad","Pais","Datos extras", "Tel.Domicilio","Tel.Casa", "Correo Electronico",
+        "Fecha de nacimiento", 
+        "Lugar de trabajo"};
+        String[]datos=new String [campos.length];
+        for (int i=0; i<campos.length; i++)
+        datos[i]=JOptionPane.showInputDialog(campos[i]+":");
+        for (int i=0; i<campos.length; i++)
+        mensaje +=campos[i]+":"+datos[i]+"\n";
+        JOptionPane.showMessageDialog(null, mensaje);
+
+        
+    }
+    
+}
